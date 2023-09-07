@@ -3,3 +3,9 @@
 //
 
 #include "FraudService.h"
+
+FraudService::~FraudService() = default;
+
+bool FraudService::isFraudulent(User *user, PaymentDetails *paymentDetails) {
+    return false;
+}

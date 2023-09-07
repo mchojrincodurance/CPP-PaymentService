@@ -7,7 +7,8 @@
 
 
 class User {
-
+public:
+    virtual ~User();
 };
 
 

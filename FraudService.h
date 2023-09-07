@@ -6,8 +6,14 @@
 #define PAYMENTSERVICE_FRAUDSERVICE_H
 
 
-class FraudService {
+#include "User.h"
+#include "PaymentDetails.h"
 
+class FraudService {
+public:
+    virtual ~FraudService();
+
+    virtual bool isFraudulent(User *user, PaymentDetails *paymentDetails);
 };
 
 

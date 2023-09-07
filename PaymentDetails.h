@@ -7,7 +7,8 @@
 
 
 class PaymentDetails {
-
+public:
+    virtual ~PaymentDetails();
 };
 
 

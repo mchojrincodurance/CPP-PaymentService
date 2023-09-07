@@ -3,3 +3,11 @@
 //
 
 #include "PaymentGateway.h"
+
+PaymentGateway::~PaymentGateway() {
+
+}
+
+void PaymentGateway::payWith(PaymentDetails *paymentDetails) {
+
+}

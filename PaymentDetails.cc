@@ -3,3 +3,7 @@
 //
 
 #include "PaymentDetails.h"
+
+PaymentDetails::~PaymentDetails() {
+
+}

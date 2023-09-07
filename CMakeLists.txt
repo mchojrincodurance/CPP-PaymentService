@@ -13,4 +13,22 @@ add_executable(PaymentService main.cpp
         User.cc
         User.h
         PaymentDetails.cc
-        PaymentDetails.h)
+        PaymentDetails.h
+        mocks/MockPaymentGateway.cc
+        mocks/MockPaymentGateway.h
+        FraudulentPaymentException.cc
+        FraudulentPaymentException.h
+        mocks/MockFraudService.cc
+        mocks/MockFraudService.h)
+
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+
+FetchContent_MakeAvailable(googletest)
+
+target_link_libraries(PaymentService gtest gtest_main gmock)
+include(GoogleTest)
+gtest_discover_tests(PaymentService)

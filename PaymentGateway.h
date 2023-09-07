@@ -6,8 +6,12 @@
 #define PAYMENTSERVICE_PAYMENTGATEWAY_H
 
 
-class PaymentGateway {
+#include "PaymentDetails.h"
 
+class PaymentGateway {
+public:
+    virtual ~PaymentGateway();
+    virtual void payWith(PaymentDetails * paymentDetails);
 };
 
 
